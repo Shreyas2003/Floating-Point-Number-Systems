@@ -56,7 +56,9 @@ In addition to being able to model a very wide range of numbers, IEEE 754 also h
 
 ### IEEE 754 Pros and Cons
 
-The IEEE 754 system
+The most obvious upside of the IEEE 754 number system is the fact that it is so widely adopted. As a result, when creating low-level programs that need to be used on various types of computers, using the IEEE 754 system would be a very safe bet when compared to the other number systems discussed below. Another advantage of IEEE 754 is that it 
+
+On the other hand, IEEE 754 also comes with its own set of downsides. The most prevalent downside of IEEE 754 is floating point error. When doing arithmetic operations on numbers that are several magnitudes away from each other (example: $10^{40} + 10^{-30}), because of the way numbers are stored in IEEE 754, some digits will be cut off. This will lead to a loss of accuracy, especially if these errors are allowed to propagate through a certain problem and become larger [5]. Another downside of IEEE 754 is that it has a fixed number of bits for the mantissa and exponent. This could lead to unnessescary space being allocated to either field, which may potentially result in a loss of information because there are not enough bits to store the information [6].
 
 ## Non-IEEE Floating Point Number Systems
 
@@ -71,3 +73,5 @@ The IEEE 754 system
 2. https://www.geeksforgeeks.org/ieee-standard-754-floating-point-numbers/
 3. https://docs.oracle.com/cd/E19957-01/806-3568/ncg_math.html#:~:text=IEEE%20754%20specifies%3A,and%20occupies%2064%20bits%20overall.
 4. https://mathcenter.oxford.emory.edu/site/cs170/ieee754/
+5. https://learn.microsoft.com/en-us/office/troubleshoot/excel/floating-point-arithmetic-inaccurate-result
+6. https://babbage.cs.qc.cuny.edu/IEEE-754.old/References.xhtml
