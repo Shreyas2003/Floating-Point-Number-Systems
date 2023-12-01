@@ -16,7 +16,7 @@ Title: Types of Floating Point Number Systems
 - [Sources](#Sources)
 
 ## Introduction
-The term "floating-point number" refers to any number which has a decimal point in some place. For example, 12.3, -43.2, and 50.0 are instances of floating point numbers, whereas numbers such as 1, 2, and -4 are not [1]. In the realm of computing, the term floating point number is used to describe any sort of number storage method that allows the number in question to have a decimal point. By far the most popular floating-point number system is the IEEE 754 method. However, some alternatives, such as [], exist with their own sets of pros and cons.
+The term "floating-point number" refers to any number which has a decimal point in some place. For example, 12.3, -43.2, and 50.0 are instances of floating point numbers, whereas numbers such as 1, 2, and -4 are not [1]. In the realm of computing, the term floating point number is used to describe any sort of number storage method that allows the number in question to have a decimal point. By far the most popular floating-point number system is the IEEE 754 method. However, some alternatives, such as posits, Bfloat16, minifloats, and fixed point arithmetic, exist with their own sets of pros and cons.
 
 ## IEEE 754 System
 
