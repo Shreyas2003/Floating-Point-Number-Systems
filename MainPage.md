@@ -1,10 +1,10 @@
 ---
 Name: Shreyas Pani
 Topic: Floating point number systems
-Title: Types of Floating Point Numbers
+Title: Types of Floating Point Number Systems
 ---
 
-# FTypes of Floating Point Numbers
+# Types of Floating Point Number Systems
 
 ## Table of Contents
 - [Introduction](#Introduction)
