@@ -89,7 +89,7 @@ The main drawback to posit numbers is shown in the graph above; while Posits are
 
 Bfloat16 is a number format designed specifically for machine learning applications. As the name suggests, it is a 16-bit number format that has 1 sign bit, 7 exponent bits, and 8 mantissa bits. 
 
-![](bfloat16format.png)[10]
+![](bFloat16Format.png)[10]
 
 Calculations to convert bfloat16 to decimal and vice versa are done in the exact same manner as IEEE 754 numbers: $(-1)^{sign} * (1 + mantissa) * 2 ^ {exponent - bias}$. However, in this case, because the size of the exponent field in bfloat16 numbers is fixed, the bias term will always be equal to 127. Therefore, we can simply the formula to $(-1)^{sign} * (1 + mantissa) * 2 ^ {exponent - 127}$. 
 
