@@ -99,9 +99,26 @@ The most prevalent downside of bfloat16 also comes as a result of its size. Beca
 
 ### Minifloats
 
+Minifloats are a more general type of bfloat16 numbers. The term minifloat refers to any floating-point number represented with very few bits. The format of these numbers is described using a list of 4 values: (S, E, M, B). S is the length of the sign field, which is almost always either 0 or 1. E is the length of the exponent field, M is the length of the mantissa, and B is the value of the bias term in converting the numbers from binary to decimal [11]. For example, if a minifloat had the format (1, 5, 6, 31), the binary number would be 1 + 5 + 6 = 12 bits long, and to convert these binary numbers to decimal and vice versa, the formula would be $(-1)^{sign} * (1 + mantissa) * 2 ^ {exponent - 31}$. 
+
+Minifloats have very similar pros and cons to bfloat16 numbers; their smaller size allows for faster computations, but this smaller size comes at the cost of accuracy.
+
 ### Fixed-Point Numbers
 
+Fixed-point numbers are a type of floating point number which has a fixed number of bits dedicated to the left of the decimal point, and a fixed number of bits dedicated to the right of the decimal point. The format of these numbers is denoted as U(x, y), where x is the number of bits to the left of the decimal place (the integer portion of the number), and y is the number of bits to the right of the decimal place (the fractional portion of the number). For example, a U(10, 6) number would look like:
+
+
 ## Applications for Different Types of Floating Point Number Systems
+
+### IEEE 754
+
+### Posits
+
+### Bfloat16 and Minifloats
+Machine Learning [10]
+Computer Vision [12]
+
+### Fixed-Point Numbers
 
 ## Implementation of Floating Point Number Systems
 
@@ -118,3 +135,5 @@ The most prevalent downside of bfloat16 also comes as a result of its size. Beca
 8. https://www.johndcook.com/blog/2018/04/11/anatomy-of-a-posit-number/#:~:text=A%20posit%20number%20type%20is,devoted%20to%20the%20exponent%2C%20es
 9. https://www.sigarch.org/posit-a-potential-replacement-for-ieee-754/
 10. https://cloud.google.com/tpu/docs/bfloat16
+11. https://mrob.com/pub/math/floatformats.html
+12. https://www.mdpi.com/2076-3417/11/23/11164
