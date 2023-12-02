@@ -87,7 +87,15 @@ The main drawback to posit numbers is shown in the graph above; while Posits are
 
 ### Bfloat16
 
-Bfloat16 is a number format designed specifically for machine learning applications. As the name suggests, it is a 16-bit number format which has 1 sign bit, 7 exponent bits, and 8 mantissa bits. 
+Bfloat16 is a number format designed specifically for machine learning applications. As the name suggests, it is a 16-bit number format that has 1 sign bit, 7 exponent bits, and 8 mantissa bits. 
+
+![](bfloat16format.png)[10]
+
+Calculations to convert bfloat16 to decimal and vice versa are done in the exact same manner as IEEE 754 numbers: $(-1)^{sign} * (1 + mantissa) * 2 ^ {exponent - bias}$. However, in this case, because the size of the exponent field in bfloat16 numbers is fixed, the bias term will always be equal to 127. Therefore, we can simply the formula to $(-1)^{sign} * (1 + mantissa) * 2 ^ {exponent - 127}$. 
+
+The main upside to bfloat16 is hardware efficiency. Because bfloat16 numbers only have 16 bits, hardware computations can be done much faster than with 32 or 64-bit numbers. One such application is the realm of machine learning, where massive amounts of computations have to be completed to output a result. 
+
+The most prevalent downside of bfloat16 also comes as a result of its size. Because bfloat16 is only 16 bits, it cannot store nearly as much information as a 32-bit IEEE or posit number can. In other words, the tradeoff for faster computations with bfloat16 numbers is lower accuracy in the computations.
 
 ### Minifloats
 
@@ -109,3 +117,4 @@ Bfloat16 is a number format designed specifically for machine learning applicati
 7. https://spectrum.ieee.org/floating-point-numbers-posits-processor
 8. https://www.johndcook.com/blog/2018/04/11/anatomy-of-a-posit-number/#:~:text=A%20posit%20number%20type%20is,devoted%20to%20the%20exponent%2C%20es
 9. https://www.sigarch.org/posit-a-potential-replacement-for-ieee-754/
+10. https://cloud.google.com/tpu/docs/bfloat16
