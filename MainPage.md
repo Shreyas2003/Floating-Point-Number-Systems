@@ -64,7 +64,18 @@ On the other hand, IEEE 754 also comes with its own set of downsides. The most p
 
 ### Posits
 
-Posits are arguably the most frequently cited alternative to IEEE 754 numbers. While the IEEE 754 system consists of 3 main parts: a sign bit, exponent, and mantissa, the posit instead has 4 parts: the sign bit, regime, exponent, and mantissa, as show in the figure below: 
+Posits are arguably the most frequently cited alternative to IEEE 754 numbers. While the IEEE 754 system consists of 3 main parts: a sign bit, exponent, and mantissa, the posit instead has 4 parts: the sign bit, regime, exponent, and mantissa, as shown in the figure below: 
+
+![](PositFormat.png)[7] \
+\* Note that this figure calls the mantissa portion of the number a fraction - both terms are interchangeable in this context
+
+The regime bits can vary in length based on the size of the number. The length of the regime is determined by the length of consecutive zeros or 1s. For example, if directly after the sign bit we had 0001, the regime is considered to be 000. Conversely, if we had 1111110 in the regime space, the regime is considered to be 111111. 
+
+To convert between posit numbers to base-10 (and vice versa), the following formula is used:
+
+$$ num = (-1)^b * (1 + mantissa) * 2^{e + k * 2^{es}} $$ [8]
+
+where b is the sign bit, mantissa is the value inside the mantissa (calculated the same way as in IEEE 754 format), and e is the value in the exponent field. k is defined as the length of the regime space. If there are $l$ 1s in the regime space, k = $l - 1$. If there are instead $l$ 0s in the regime space, k = $-l$. 
 
 ### Bfloat16
 
@@ -85,3 +96,5 @@ Posits are arguably the most frequently cited alternative to IEEE 754 numbers. W
 4. https://mathcenter.oxford.emory.edu/site/cs170/ieee754/
 5. https://learn.microsoft.com/en-us/office/troubleshoot/excel/floating-point-arithmetic-inaccurate-result
 6. https://babbage.cs.qc.cuny.edu/IEEE-754.old/References.xhtml
+7. https://spectrum.ieee.org/floating-point-numbers-posits-processor
+8. https://www.johndcook.com/blog/2018/04/11/anatomy-of-a-posit-number/#:~:text=A%20posit%20number%20type%20is,devoted%20to%20the%20exponent%2C%20es.
