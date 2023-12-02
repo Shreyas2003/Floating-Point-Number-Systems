@@ -64,6 +64,8 @@ On the other hand, IEEE 754 also comes with its own set of downsides. The most p
 
 ### Posits
 
+Posits are arguably the most frequently cited alternative to IEEE 754 numbers. While the IEEE 754 system consists of 3 main parts: a sign bit, exponent, and mantissa, the posit instead has 4 parts: the sign bit, regime, exponent, and mantissa, as show in the figure below: 
+
 ### Bfloat16
 
 ### Minifloats
