@@ -64,7 +64,7 @@ On the other hand, IEEE 754 also comes with its own set of downsides. The most p
 
 ### Posits
 
-### bFloat16
+### Bfloat16
 
 ### Minifloats
 
