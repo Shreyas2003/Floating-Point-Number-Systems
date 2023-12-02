@@ -107,6 +107,11 @@ Minifloats have very similar pros and cons to bfloat16 numbers; their smaller si
 
 Fixed-point numbers are a type of floating point number which has a fixed number of bits dedicated to the left of the decimal point, and a fixed number of bits dedicated to the right of the decimal point. The format of these numbers is denoted as U(x, y), where x is the number of bits to the left of the decimal place (the integer portion of the number), and y is the number of bits to the right of the decimal place (the fractional portion of the number). For example, a U(10, 6) number would look like:
 
+![](FixedPoint.png)[13]
+
+If the number includes a sign bit, the fixed-point number is instead denoted as S(x, y), where there is 1 sign bit at the start of the number, then x integer bits and y fractional bits. 
+
+The primary upside of fixed-point numbers is their efficiency. Because fixed-point numbers do not have an exponent field and only sometimes have a sign field, computations with these numbers are nearly as fast as with integers, making fixed-point numbers the most efficient floating-point number storage method when compared with IEEE 754, posits, bfloat16, or minifloats. On the other hand, their main downside is the lack of range. Because there is no exponent field, fixed-point numbers have by far the smallest range of their equally-sized floating-point counterparts [14].
 
 ## Applications for Different Types of Floating Point Number Systems
 
@@ -137,3 +142,5 @@ Computer Vision [12]
 10. https://cloud.google.com/tpu/docs/bfloat16
 11. https://mrob.com/pub/math/floatformats.html
 12. https://www.mdpi.com/2076-3417/11/23/11164
+13. https://www.sciencedirect.com/topics/computer-science/fixed-point-number#:~:text=1%20Fixed%2DPoint%20Number%20Systems,bits%20and%20four%20fraction%20bits
+14. https://inst.eecs.berkeley.edu/~cs61c/sp06/handout/fixedpt.html#:~:text=In%20other%20word%2C%20fixed%20point,to%20a%20quantum%20of%200.5.
