@@ -87,6 +87,8 @@ The main drawback to posit numbers is shown in the graph above; while Posits are
 
 ### Bfloat16
 
+Bfloat16 is a number format designed specifically for machine learning applications. As the name suggests, it is a 16-bit number format which has 1 sign bit, 7 exponent bits, and 8 mantissa bits. 
+
 ### Minifloats
 
 ### Fixed-Point Numbers
