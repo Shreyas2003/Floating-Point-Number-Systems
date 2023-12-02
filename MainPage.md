@@ -79,7 +79,11 @@ Where b is the sign bit, mantissa is the value inside the mantissa (calculated t
 
 There are two special numbers in the posit format: 0 and +/- infinity. When the whole posit number is 0s, then zero is stored. When a 1 is followed by all 0s, then the number is stored as +/- infinity. There is no way to store a strictly positive or strictly negative infinity in the posit format. [9]
 
-The main upside to Posit numbers is that they are more accurate for numbers with exponents close to 0. This is because more bits can be dedicated to the fraction portion of the number, since we will likely have a regime value close to 0. 
+The main upside to posit numbers is that they are more accurate for numbers with exponents close to 0. This is because more bits can be dedicated to the fraction portion of the number since we will likely have a regime value close to 0. Posits also have a much greater range than a similar size IEEE number thanks to the inclusion of the regime field.
+
+![](PositAccuracy.png)[7]
+
+The main drawback to posit numbers is shown in the graph above; while Posits are slightly more accurate with numbers that have an exponent near 0, they are much more inaccurate for very large or very small numbers. This is because fewer bits are dedicated to the fraction in posit numbers when compared to IEEE numbers if several regime bits are needed, leading to a loss in information.
 
 ### Bfloat16
 
