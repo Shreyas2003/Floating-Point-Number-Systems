@@ -67,15 +67,19 @@ On the other hand, IEEE 754 also comes with its own set of downsides. The most p
 Posits are arguably the most frequently cited alternative to IEEE 754 numbers. While the IEEE 754 system consists of 3 main parts: a sign bit, exponent, and mantissa, the posit instead has 4 parts: the sign bit, regime, exponent, and mantissa, as shown in the figure below: 
 
 ![](PositFormat.png)[7] \
-\* Note that this figure calls the mantissa portion of the number a fraction - both terms are interchangeable in this context
+\* Note that this figure calls the mantissa portion of the number a fraction - both terms are interchangeable in this context. Also, as will be discussed shortly, the size of the exponent field is variable and does not necessarily have to be 2. 
 
-The regime bits can vary in length based on the size of the number. The length of the regime is determined by the length of consecutive zeros or 1s. For example, if directly after the sign bit we had 0001, the regime is considered to be 000. Conversely, if we had 1111110 in the regime space, the regime is considered to be 111111. 
+The regime bits can vary in length based on the size of the number. The length of the regime is determined by the length of consecutive zeros or 1s. For example, if directly after the sign bit we had 0001, the regime is considered to be 000. Conversely, if we had 1111110 in the regime space, the regime is considered to be 111111. In the example above, there are two exponent bits. However, this can change based on the implementation used. The number $es$ represents the maximum number of exponent bits possible (in the example above, $es = 2$). If there are at least $es$ bits left after the regime, then $es$ bits will be saved for the regime, and any leftover bits will be the mantissa portion of the number. If there are $es$ or less bits left, then all of the remaining bits will be dedicated to the exponent, and no bits will be allocated for the mantissa. 
 
 To convert between posit numbers to base-10 (and vice versa), the following formula is used:
 
-$$ num = (-1)^b * (1 + mantissa) * 2^{e + k * 2^{es}} $$ [8]
+$$num = (-1)^b * (1 + mantissa) * 2^{e + k * 2^{es}}$$[8]
 
-where b is the sign bit, mantissa is the value inside the mantissa (calculated the same way as in IEEE 754 format), and e is the value in the exponent field. k is defined as the length of the regime space. If there are $l$ 1s in the regime space, k = $l - 1$. If there are instead $l$ 0s in the regime space, k = $-l$. 
+Where b is the sign bit, mantissa is the value inside the mantissa (calculated the same way as in IEEE 754 format), and e is the value in the exponent field. k is defined as the length of the regime space. If there are $l$ 1s in the regime space, k = $l - 1$. If there are instead $l$ 0s in the regime space, then k = $-l$. Lastly, es is defined as the maximum number of exponent bits possible. 
+
+There are two special numbers in the posit format: 0 and +/- infinity. When the whole posit number is 0s, then zero is stored. When a 1 is followed by all 0s, then the number is stored as +/- infinity. There is no way to store a strictly positive or strictly negative infinity in the posit format. [9]
+
+The main upside to Posit numbers is that they are more accurate for numbers with exponents close to 0. This is because more bits can be dedicated to the fraction portion of the number, since we will likely have a regime value close to 0. 
 
 ### Bfloat16
 
@@ -97,4 +101,5 @@ where b is the sign bit, mantissa is the value inside the mantissa (calculated t
 5. https://learn.microsoft.com/en-us/office/troubleshoot/excel/floating-point-arithmetic-inaccurate-result
 6. https://babbage.cs.qc.cuny.edu/IEEE-754.old/References.xhtml
 7. https://spectrum.ieee.org/floating-point-numbers-posits-processor
-8. https://www.johndcook.com/blog/2018/04/11/anatomy-of-a-posit-number/#:~:text=A%20posit%20number%20type%20is,devoted%20to%20the%20exponent%2C%20es.
+8. https://www.johndcook.com/blog/2018/04/11/anatomy-of-a-posit-number/#:~:text=A%20posit%20number%20type%20is,devoted%20to%20the%20exponent%2C%20es
+9. https://www.sigarch.org/posit-a-potential-replacement-for-ieee-754/
