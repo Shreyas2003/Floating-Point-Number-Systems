@@ -95,7 +95,7 @@ Calculations to convert bfloat16 to decimal and vice versa are done in the exact
 
 The main upside to bfloat16 is hardware efficiency. Because bfloat16 numbers only have 16 bits, hardware computations can be done much faster than with 32 or 64-bit numbers. One such application is the realm of machine learning, where massive amounts of computations have to be completed to output a result. 
 
-The most prevalent downside of bfloat16 also comes as a result of its size. Because bfloat16 is only 16 bits, it cannot store nearly as much information as a 32-bit IEEE or posit number can. In other words, the tradeoff for faster computations with bfloat16 numbers is lower accuracy in the computations.
+The most prevalent downside of bfloat16 also comes as a result of its size. Because bfloat16 is only 16 bits, it cannot store nearly as much information as a 32-bit IEEE or posit number can. In other words, the tradeoff for faster computations with bfloat16 numbers is a lower accuracy.
 
 ### Minifloats
 
