@@ -62,6 +62,14 @@ On the other hand, IEEE 754 also comes with its own set of downsides. The most p
 
 ## Non-IEEE Floating Point Number Systems
 
+### Posits
+
+### bFloat16
+
+### Minifloats
+
+### Fixed-Point Numbers
+
 ## Applications for Different Types of Floating Point Number Systems
 
 ## Implementation of Floating Point Number Systems
