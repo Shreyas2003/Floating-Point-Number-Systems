@@ -117,6 +117,8 @@ The primary upside of fixed-point numbers is their efficiency. Because fixed-poi
 
 ### IEEE 754
 
+IEEE 754 is treated as the "gold standard" for floating-point number storage. As a result, when creating programs that have to work across multiple different architectures, using IEEE 754 is typically the best choice. All Intel x86 processors [15] in addition to all AMD processors [16] are compliant with the IEEE 754 standard. 
+
 ### Posits
 
 ### Bfloat16 and Minifloats
@@ -144,3 +146,5 @@ Computer Vision [12]
 12. https://www.mdpi.com/2076-3417/11/23/11164
 13. https://www.sciencedirect.com/topics/computer-science/fixed-point-number#:~:text=1%20Fixed%2DPoint%20Number%20Systems,bits%20and%20four%20fraction%20bits
 14. https://inst.eecs.berkeley.edu/~cs61c/sp06/handout/fixedpt.html#:~:text=In%20other%20word%2C%20fixed%20point,to%20a%20quantum%20of%200.5.
+15. http://www.mscs.mu.edu/~georgec/IFAQ/casares1.html#:~:text=IEEE%20754%3A%20Intel%20x86%2C%20and,other%20Cray%20models%20have%20been
+16. https://community.amd.com/t5/opencl/amd-gpus-ieee-754-compliance/td-p/98382?attachment-id=6602
