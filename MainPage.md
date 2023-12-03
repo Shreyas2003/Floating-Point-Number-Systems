@@ -117,9 +117,10 @@ The primary upside of fixed-point numbers is their efficiency. Because fixed-poi
 
 ### IEEE 754
 
-IEEE 754 is treated as the "gold standard" for floating-point number storage. As a result, when creating programs that have to work across multiple different architectures, using IEEE 754 is typically the best choice. All Intel x86 processors [15] in addition to all AMD processors [16] are compliant with the IEEE 754 standard. 
+IEEE 754 is treated as the "gold standard" for floating-point number storage. As a result, when creating programs that have to work across multiple different architectures, using IEEE 754 is typically the best choice. All Intel x86 processors [15] in addition to all AMD processors [16] are compliant with the IEEE 754 standard. IEEE 754 also provides the best compromise between the range of values it can hold and the accuracy of the values it holds. Therefore, in cases where the value being stored could range by several magnitudes, using IEEE 754 would make the most sense to minimize overall information loss.
 
 ### Posits
+
 
 ### Bfloat16 and Minifloats
 Machine Learning [10]
