@@ -141,6 +141,12 @@ Fixed-point numbers were once used in gaming consoles before they were fitted wi
 
 ## Hardware Implications of Floating Point Number Systems
 
+### IEEE 754/bfloat16/minifloats
+
+### Posits
+
+### Fixed-Point Numbers
+
 ## Sources
 1. https://www.freecodecamp.org/news/floating-point-definition/
 2. https://www.geeksforgeeks.org/ieee-standard-754-floating-point-numbers/
