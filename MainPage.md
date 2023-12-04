@@ -121,12 +121,15 @@ IEEE 754 is treated as the "gold standard" for floating-point number storage. As
 
 ### Posits
 
+Posit numbers shine when they have an exponent close to 0, as shown in the graph depicting the accuracy of posit numbers compared to the accuracy of IEEE 754 numbers. As a result, one application of posits is their accuracy when dealing with numbers that have a low-magnitude exponent. In addition, because posits have a larger range than IEEE 754 numbers thanks to the inclusion of a regime field, posit numbers are useful when dealing with very large numbers while not having many bits to store the data.
 
 ### Bfloat16 and Minifloats
-Machine Learning [10]
-Computer Vision [12]
+
+Bfloat16 and minifloats have very similar applications thanks to their almost identical formats. The most common application for these numbers (and the motivation for the creation of the bfloat16 data type) is in machine learning. In this field, using IEEE-754-style numbers in 16-bit format provides the best common ground between numerical accuracy and hardware efficiency [10]. To be more specific, in computer vision, minifloats are used to approximate the numerical values used in convolutional neural networks (CNNs) [12].
 
 ### Fixed-Point Numbers
+
+Fixed-point numbers were once used in gaming consoles before they were fitted with the capabilities to handle floating-point computations. The last generation of gaming consoles to use fixed-point numbers were the fifth-generation consoles such as the Nintendo 64. These numbers are also used in machines where integer computations are significantly faster than floating-point computations [18]. Another application of fixed-point numbers is in signal processing, where quick recognition of these numbers and the values they hold is important [17].
 
 ## Implementation of Floating Point Number Systems
 
@@ -149,3 +152,5 @@ Computer Vision [12]
 14. https://inst.eecs.berkeley.edu/~cs61c/sp06/handout/fixedpt.html#:~:text=In%20other%20word%2C%20fixed%20point,to%20a%20quantum%20of%200.5.
 15. http://www.mscs.mu.edu/~georgec/IFAQ/casares1.html#:~:text=IEEE%20754%3A%20Intel%20x86%2C%20and,other%20Cray%20models%20have%20been
 16. https://community.amd.com/t5/opencl/amd-gpus-ieee-754-compliance/td-p/98382?attachment-id=6602
+17. https://www.geeksforgeeks.org/fixed-point-representation/#:~:text=In%20digital%20signal%20processing%20(DSP,using%20the%20binary%20point%20concept.
+18. http://rsync.irixnet.org/tutorials/pstutorials/chapter1/5-fixedpoint.html#:~:text=Fixed%20point%20math%20is%20used,IBM%20compatible%20PCs).
