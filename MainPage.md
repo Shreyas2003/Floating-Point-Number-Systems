@@ -133,6 +133,12 @@ Fixed-point numbers were once used in gaming consoles before they were fitted wi
 
 ## Implementation of Floating Point Number Systems
 
+### IEEE 754/bfloat16/minifloats
+
+### Posits
+
+### Fixed-Point Numbers
+
 ## Hardware Implications of Floating Point Number Systems
 
 ## Sources
