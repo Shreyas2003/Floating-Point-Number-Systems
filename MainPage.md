@@ -11,7 +11,7 @@ Title: Types of Floating Point Number Systems
 - [IEEE 754 System](#IEEE-754-System)
 - [Non-IEEE Floating Point Number Systems](#Non-IEEE-Floating-Point-Number-Systems)
 - [Applications for Different Types of Floating Point Number Systems](#Applications-for-Different-Types-of-Floating-Point-Number-Systems)
-- [Implementation of Floating Point Number Systems](#Implementation-of-Floating-Point-Number-Systems)
+- [Software Implementation of Floating Point Number Systems](#Software-Implementation-of-Floating-Point-Number-Systems)
 - [Hardware Implications of Floating Point Number Systems](#Hardware-Implications-of-Floating-Point-Number-Systems)
 - [Sources](#Sources)
 
@@ -131,7 +131,7 @@ Bfloat16 and minifloats have very similar applications thanks to their almost id
 
 Fixed-point numbers were once used in gaming consoles before they were fitted with the capabilities to handle floating-point computations. The last generation of gaming consoles to use fixed-point numbers were the fifth-generation consoles such as the Nintendo 64. These numbers are also used in machines where integer computations are significantly faster than floating-point computations [18]. Another application of fixed-point numbers is in signal processing, where quick recognition of these numbers and the values they hold is important [17].
 
-## Implementation of Floating Point Number Systems
+## Software Implementation of Floating Point Number Systems
 
 ### IEEE 754/bfloat16/minifloats
 
@@ -139,7 +139,7 @@ In software, IEEE 754 is implemented through the use of floating-point libraries
 
 ### Posits
 
-Although posits have a different format from IEEE 754 numbers, their 
+Although posits have a different format from IEEE 754 numbers, their implementation in software is very similar. 
 
 ### Fixed-Point Numbers
 
