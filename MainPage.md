@@ -135,7 +135,11 @@ Fixed-point numbers were once used in gaming consoles before they were fitted wi
 
 ### IEEE 754/bfloat16/minifloats
 
+In software, IEEE 754 is implemented through the use of floating-point libraries. In other words, while the human user may be able to write down numbers in base-10 in their code/workspace, the computer will implicitly convert these numbers to IEEE 754 when storing them in memory. The process by which a computer does this is similar to the one described above: first, the sign bit is evaluated. The exponent is then calculated, and the mantissa is calculated last. The mantissa is then rounded based on whatever rounding scheme the architecture supports (round to the nearest number, round up, or round down) [19]. 
+
 ### Posits
+
+Although posits have a different format from IEEE 754 numbers, their 
 
 ### Fixed-Point Numbers
 
@@ -166,3 +170,4 @@ Fixed-point numbers were once used in gaming consoles before they were fitted wi
 16. https://community.amd.com/t5/opencl/amd-gpus-ieee-754-compliance/td-p/98382?attachment-id=6602
 17. https://www.geeksforgeeks.org/fixed-point-representation/#:~:text=In%20digital%20signal%20processing%20(DSP,using%20the%20binary%20point%20concept.
 18. http://rsync.irixnet.org/tutorials/pstutorials/chapter1/5-fixedpoint.html#:~:text=Fixed%20point%20math%20is%20used,IBM%20compatible%20PCs).
+19. https://medium.com/@thishankahadugoda/how-computer-deal-with-floating-point-numbers-decimal-to-ieee-754-floating-point-representation-20d845436c9f
