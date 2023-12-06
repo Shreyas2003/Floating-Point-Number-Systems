@@ -139,13 +139,20 @@ Because bfloat16 and minifloats still use the IEEE 754 format, all three number 
 
 In software, IEEE 754 is implemented through the use of floating-point libraries. In other words, while the human user may be able to write down numbers in base-10 in their code/workspace, the computer will implicitly convert these numbers to IEEE 754 when storing them in memory. The process by which a computer does this is similar to the one described above: first, the sign bit is evaluated. The exponent is then calculated, and the mantissa is calculated last. The mantissa is then rounded based on whatever rounding scheme the architecture supports (round to the nearest number, round up, or round down) [19]. 
 
-From a hardware perspective, IEEE 754 format numbers are in a sort of middle ground; while they are not as fast as fixed-point numbers, they are between 30 and 60% faster than posit numbers. 
+From a hardware perspective, IEEE 754 format numbers are in a sort of middle ground; while they are not as fast as fixed-point numbers, they are between 30 and 60% faster than posit numbers. To be more precise, on average, to multiply two 16-bit posit numbers together in a pipelined CPU takes approximately 2.89ns. Doing the same operation but with the IEEE format on the same speed pipelined CPU takes an average of 2.69ns [23]. 
+
+<img src="IEEEMult.png" alt="drawing" width="400"/> [24] \
+This is a sample architecture for a circuit that multiplies two IEEE 754 numbers together. 
 
 ### Posits
 
 Although posits have a different format from IEEE 754 numbers, their implementation in software is very similar. Several different libraries exist on the internet that can be downloaded to make a computer compatible with posit numbers. One such publically available implementation is at this GitHub repository: https://github.com/cjdelisle/libposit [20]. The way that this specific library works is by defining the structure of a posit number as well as the operations for simple binary instructions such as add, subtract, bitwise or, and bitwise and. 
 
-From a hardware perspective, posit numbers can be quite tricky to implement. This is because a posit number has four fields, while the IEEE format has 3 fields, and the fixed-point number format has either 1 or 2 fields. As a result of having more fields, more conversions have to be completed before the numbers can be added. This leads to posit numbers having the highest hardware complexity of the different number types discussed [22].
+From a hardware perspective, posit numbers can be quite tricky to implement. This is because a posit number has four fields, while the IEEE format has 3 fields, and the fixed-point number format has either 1 or 2 fields. As a result of having more fields, more conversions have to be completed before the numbers can be added. This leads to posit numbers having the highest hardware complexity of the different number types discussed [22]. Despite this fact, posits are very slightly faster than IEEE numbers when adding. Adding two 64-bit posit numbers in a pipelined CPU takes an average of 2.93ns. For the IEEE format under the same conditions, the average time is 2.99ns [23].
+
+![](PositMultiplier.png)[23] \
+This is a sample architecture for a circuit that multiplies two posit numbers together. Without diving into the intricacies of this architecture, it is easy to see that the posit architecture is much more complex than the architecture for IEEE 754 numbers.
+
 
 ### Fixed-Point Numbers
 
@@ -179,3 +186,4 @@ Similarly, from a hardware perspective, fixed-point numbers are the simplest to 
 21. https://www.allaboutcircuits.com/technical-articles/fixed-point-representation-the-q-format-and-addition-examples/
 22. https://ieeexplore.ieee.org/document/8892116
 23. https://hal.science/hal-03195756v3/file/2021_Posit_IEEE754_Hardware_Cost.pdf
+24. https://www.researchgate.net/figure/Block-Diagram-of-IEEE-754-Double-Precision-Floating-Point-Multiplier_fig4_340039438
