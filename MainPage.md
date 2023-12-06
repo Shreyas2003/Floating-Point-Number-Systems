@@ -185,7 +185,7 @@ In summary, IEEE 754, bfloat16, minifloat, posit, and fixed-point numbers are fo
 18. Chapter 1.5: Fixed point math. Chapter 1.5: Fixed point Math. (n.d.). http://rsync.irixnet.org/tutorials/pstutorials/chapter1/5-fixedpoint.html#:~:text=Fixed%20point%20math%20is%20used,IBM%20compatible%20PCs). 
 19. Thishankahadugoda. (2021, October 5). How computer deal with Floating Point Numbers: Decimal to IEEE 754 Floating Point Representation. Medium. https://medium.com/@thishankahadugoda/how-computer-deal-with-floating-point-numbers-decimal-to-ieee-754-floating-point-representation-20d845436c9f 
 20. Cjdelisle. (n.d.). CJDELISLE/Libposit: A library for working with the posit number type. GitHub. https://github.com/cjdelisle/libposit 
-21. https://www.allaboutcircuits.com/technical-articles/fixed-point-representation-the-q-format-and-addition-examples/
-22. https://ieeexplore.ieee.org/document/8892116
-23. https://hal.science/hal-03195756v3/file/2021_Posit_IEEE754_Hardware_Cost.pdf
-24. https://www.researchgate.net/figure/Block-Diagram-of-IEEE-754-Double-Precision-Floating-Point-Multiplier_fig4_340039438
+21. Fixed-point representation: The Q format and addition examples - technical articles. All About Circuits. (n.d.). https://www.allaboutcircuits.com/technical-articles/fixed-point-representation-the-q-format-and-addition-examples/ 
+22. Evaluating the hardware cost of the Posit Number System | IEEE (n.d.). https://ieeexplore.ieee.org/document/8892116 
+23. Comparing posit and IEEE-754 hardware cost - hal.science. (n.d.-a). https://hal.science/hal-03195756v3/file/2021_Posit_IEEE754_Hardware_Cost.pdf 
+24. Block diagram of IEEE-754 Double precision floating-point multiplier. (n.d.-a). https://www.researchgate.net/figure/Block-Diagram-of-IEEE-754-Double-Precision-Floating-Point-Multiplier_fig4_340039438 
