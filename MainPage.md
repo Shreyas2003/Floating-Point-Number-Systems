@@ -70,7 +70,7 @@ Posits are arguably the most frequently cited alternative to IEEE 754 numbers. W
 ![](PositFormat.png)[7] \
 \* Note that this figure calls the mantissa portion of the number a fraction - both terms are interchangeable in this context. Also, as will be discussed shortly, the size of the exponent field is variable and does not necessarily have to be 2. 
 
-The regime bits can vary in length based on the size of the number. The length of the regime is determined by the length of consecutive zeros or 1s. For example, if directly after the sign bit we had 0001, the regime is considered to be 000. Conversely, if we had 1111110 in the regime space, the regime is considered to be 111111. In the example above, there are two exponent bits. However, this can change based on the implementation used. The number $es$ represents the maximum number of exponent bits possible (in the example above, $es = 2$). If there are at least $es$ bits left after the regime, then $es$ bits will be saved for the regime, and any leftover bits will be the mantissa portion of the number. If there are $es$ or less bits left, then all of the remaining bits will be dedicated to the exponent, and no bits will be allocated for the mantissa. 
+The regime bits can vary in length based on the size of the number. The length of the regime is determined by the length of consecutive zeros or 1s. For example, if directly after the sign bit we had 0001, the regime is considered to be 000. Conversely, if we had 1111110 in the regime space, the regime is considered to be 111111. In the example above, there are two exponent bits. However, this can change based on the implementation used. The number $es$ represents the maximum number of exponent bits possible (in the example above, $es = 2$). If there are at least $es$ bits left after the regime, then $es$ bits will be saved for the regime, and any leftover bits will be the mantissa portion of the number. If there are $es$ or fewer bits left, then all of the remaining bits will be dedicated to the exponent, and no bits will be allocated for the mantissa. 
 
 To convert between posit numbers to base-10 (and vice versa), the following formula is used:
 
@@ -132,7 +132,7 @@ Bfloat16 and minifloats have very similar applications thanks to their almost id
 
 Fixed-point numbers were once used in gaming consoles before they were fitted with the capabilities to handle floating-point computations. The last generation of gaming consoles to use fixed-point numbers were the fifth-generation consoles such as the Nintendo 64. These numbers are also used in machines where integer computations are significantly faster than floating-point computations [18]. Another application of fixed-point numbers is in signal processing, where quick recognition of these numbers and the values they hold is important [17].
 
-## Software Implementation of Floating Point Number Systems
+## Software and Hardware Implementation of Floating Point Number Systems
 
 ### IEEE 754/bfloat16/minifloats
 
@@ -142,17 +142,13 @@ In software, IEEE 754 is implemented through the use of floating-point libraries
 
 Although posits have a different format from IEEE 754 numbers, their implementation in software is very similar. Several different libraries exist on the internet that can be downloaded to make a computer compatible with posit numbers. One such publically available implementation is at this GitHub repository: https://github.com/cjdelisle/libposit [20]. The way that this specific library works is by defining the structure of a posit number as well as the operations for simple binary instructions such as add, subtract, bitwise or, and bitwise and. 
 
-### Fixed-Point Numbers
-
-
-
-## Hardware Implications of Floating Point Number Systems
-
-### IEEE 754/bfloat16/minifloats
-
-### Posits
+From a hardware perspective, posit numbers can be quite tricky to implement. This is because a posit number has four fields, while the IEEE format has 3 fields, and the fixed-point number format has either 1 or 2 fields. As a result of having more fields, more conversions have to be completed before the numbers can be added. This leads to posit numbers having the highest hardware complexity of the different number types discussed [22].
 
 ### Fixed-Point Numbers
+
+Fixed-point numbers arguably have the simplest implementation of the number types discussed in this article. Because they do not have any special fields such as exponents and mantissas; instead, they only have the number being stored in binary format and sometimes a sign bit. Therefore, from a software point of view, fixed-point numbers are the simplest to deal with. 
+
+Similarly, from a hardware perspective, fixed-point numbers are the simplest to understand. Because fixed-point numbers are stored in the same way as integers, addition and subtraction of these numbers is very simple. Fixed-point numbers are added in the same way integers are, with a shift if necessary to "line up" the decimal points of both numbers. For example, if a computer wanted to add 1001.01 + 100.1 (for this example, no sign bit is used), the computer would first convert 100.1 to 100.10, then add the corresponding place values from right to left. Therefore, the computer would then store 1101.11 [21].
 
 ## Conclusion
 
@@ -177,3 +173,5 @@ Although posits have a different format from IEEE 754 numbers, their implementat
 18. http://rsync.irixnet.org/tutorials/pstutorials/chapter1/5-fixedpoint.html#:~:text=Fixed%20point%20math%20is%20used,IBM%20compatible%20PCs).
 19. https://medium.com/@thishankahadugoda/how-computer-deal-with-floating-point-numbers-decimal-to-ieee-754-floating-point-representation-20d845436c9f
 20. https://github.com/cjdelisle/libposit
+21. https://www.allaboutcircuits.com/technical-articles/fixed-point-representation-the-q-format-and-addition-examples/
+22. https://ieeexplore.ieee.org/document/8892116
