@@ -13,6 +13,7 @@ Title: Types of Floating Point Number Systems
 - [Applications for Different Types of Floating Point Number Systems](#Applications-for-Different-Types-of-Floating-Point-Number-Systems)
 - [Software Implementation of Floating Point Number Systems](#Software-Implementation-of-Floating-Point-Number-Systems)
 - [Hardware Implications of Floating Point Number Systems](#Hardware-Implications-of-Floating-Point-Number-Systems)
+- [Concluion](#Conclusion)
 - [Sources](#Sources)
 
 ## Introduction
@@ -139,9 +140,11 @@ In software, IEEE 754 is implemented through the use of floating-point libraries
 
 ### Posits
 
-Although posits have a different format from IEEE 754 numbers, their implementation in software is very similar. 
+Although posits have a different format from IEEE 754 numbers, their implementation in software is very similar. Several different libraries exist on the internet that can be downloaded to make a computer compatible with posit numbers. One such publically available implementation is at this GitHub repository: https://github.com/cjdelisle/libposit [20]. The way that this specific library works is by defining the structure of a posit number as well as the operations for simple binary instructions such as add, subtract, bitwise or, and bitwise and. 
 
 ### Fixed-Point Numbers
+
+
 
 ## Hardware Implications of Floating Point Number Systems
 
@@ -150,6 +153,8 @@ Although posits have a different format from IEEE 754 numbers, their implementat
 ### Posits
 
 ### Fixed-Point Numbers
+
+## Conclusion
 
 ## Sources
 1. https://www.freecodecamp.org/news/floating-point-definition/
@@ -171,3 +176,4 @@ Although posits have a different format from IEEE 754 numbers, their implementat
 17. https://www.geeksforgeeks.org/fixed-point-representation/#:~:text=In%20digital%20signal%20processing%20(DSP,using%20the%20binary%20point%20concept.
 18. http://rsync.irixnet.org/tutorials/pstutorials/chapter1/5-fixedpoint.html#:~:text=Fixed%20point%20math%20is%20used,IBM%20compatible%20PCs).
 19. https://medium.com/@thishankahadugoda/how-computer-deal-with-floating-point-numbers-decimal-to-ieee-754-floating-point-representation-20d845436c9f
+20. https://github.com/cjdelisle/libposit
