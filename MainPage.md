@@ -135,7 +135,11 @@ Fixed-point numbers were once used in gaming consoles before they were fitted wi
 
 ### IEEE 754/bfloat16/minifloats
 
+Because bfloat16 and minifloats still use the IEEE 754 format, all three number types carry the same upsides and downsides when examining these numbers from a hardware and software perspective.
+
 In software, IEEE 754 is implemented through the use of floating-point libraries. In other words, while the human user may be able to write down numbers in base-10 in their code/workspace, the computer will implicitly convert these numbers to IEEE 754 when storing them in memory. The process by which a computer does this is similar to the one described above: first, the sign bit is evaluated. The exponent is then calculated, and the mantissa is calculated last. The mantissa is then rounded based on whatever rounding scheme the architecture supports (round to the nearest number, round up, or round down) [19]. 
+
+From a hardware perspective, IEEE 754 format numbers are in a sort of middle ground; while they are not as fast as fixed-point numbers, they are between 30 and 60% faster than posit numbers. 
 
 ### Posits
 
@@ -174,3 +178,4 @@ Similarly, from a hardware perspective, fixed-point numbers are the simplest to 
 20. https://github.com/cjdelisle/libposit
 21. https://www.allaboutcircuits.com/technical-articles/fixed-point-representation-the-q-format-and-addition-examples/
 22. https://ieeexplore.ieee.org/document/8892116
+23. https://hal.science/hal-03195756v3/file/2021_Posit_IEEE754_Hardware_Cost.pdf
