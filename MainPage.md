@@ -165,16 +165,16 @@ Similarly, from a hardware perspective, fixed-point numbers are the simplest to 
 In summary, IEEE 754, bfloat16, minifloat, posit, and fixed-point numbers are formats used to store numbers in binary format. While IEEE 754 is by far the most commonly used format in modern computers, all of these number types have their upsides and downsides. IEEE 754 is widely used but is prone to floating-point error. Bfloat16 and minifloat use the same format under the hood as IEEE 754 but can store less information thanks to the smaller number of bits allocated to these number types. Posit numbers can store larger and smaller numbers than IEEE 754 due to the regime space, but are the most complicated to implement in hardware. Fixed-point numbers are the fastest and simplest but cannot store nearly as wide of a range of numbers as the other formats can.
 
 ## Sources
-1. https://www.freecodecamp.org/news/floating-point-definition/
-2. https://www.geeksforgeeks.org/ieee-standard-754-floating-point-numbers/
-3. https://docs.oracle.com/cd/E19957-01/806-3568/ncg_math.html#:~:text=IEEE%20754%20specifies%3A,and%20occupies%2064%20bits%20overall.
-4. https://mathcenter.oxford.emory.edu/site/cs170/ieee754/
-5. https://learn.microsoft.com/en-us/office/troubleshoot/excel/floating-point-arithmetic-inaccurate-result
-6. https://babbage.cs.qc.cuny.edu/IEEE-754.old/References.xhtml
-7. https://spectrum.ieee.org/floating-point-numbers-posits-processor
-8. https://www.johndcook.com/blog/2018/04/11/anatomy-of-a-posit-number/#:~:text=A%20posit%20number%20type%20is,devoted%20to%20the%20exponent%2C%20es
-9. https://www.sigarch.org/posit-a-potential-replacement-for-ieee-754/
-10. https://cloud.google.com/tpu/docs/bfloat16
+1. freeCodeCamp.org. (2021, April 28). Floating Point Definition. https://www.freecodecamp.org/news/floating-point-definition/ 
+2. GeeksforGeeks. (2020, March 16). IEEE standard 754 Floating point numbers. GeeksforGeeks. https://www.geeksforgeeks.org/ieee-standard-754-floating-point-numbers/ 
+3. Chapter 2. IEEE Arithmetic. (2000, April 5). https://docs.oracle.com/cd/E19957-01/806-3568/ncg_math.html#:~:text=IEEE%20754%20specifies%3A,and%20occupies%2064%20bits%20overall 
+4. The IEEE 754 Format. The IEEE 754 format. (n.d.). https://mathcenter.oxford.emory.edu/site/cs170/ieee754/ 
+5. Helenclu. (n.d.). Floating-point arithmetic may give inaccurate result in Excel - Microsoft 365 apps. Floating-point arithmetic may give inaccurate result in Excel - Microsoft 365 Apps | Microsoft Learn. https://learn.microsoft.com/en-us/office/troubleshoot/excel/floating-point-arithmetic-inaccurate-result 
+6. IEEE-754 Reference Material. IEEE-754 reference material. (2021, May 5). https://babbage.cs.qc.cuny.edu/IEEE-754.old/References.xhtml 
+7. Genkina, D. (2023, March 29). Posits, a new kind of number, improves the math of ai. IEEE Spectrum. https://spectrum.ieee.org/floating-point-numbers-posits-processor 
+8. John. (2022, April 11). Posits: Tapered precision real numbers. John D. Cook | Applied Mathematics Consulting. https://www.johndcook.com/blog/2018/04/11/anatomy-of-a-posit-number/#:~:text=A%20posit%20number%20type%20is,devoted%20to%20the%20exponent%2C%20es 
+9. Behnam, Payman. (2020, April 21). Posit: A potential replacement for IEEE 754. SIGARCH. https://www.sigarch.org/posit-a-potential-replacement-for-ieee-754/ 
+10. Google. (n.d.). The BFLOAT16 Numerical Format&nbsp; |&nbsp; cloud TPU&nbsp; |&nbsp; google cloud. Google. https://cloud.google.com/tpu/docs/bfloat16 
 11. https://mrob.com/pub/math/floatformats.html
 12. https://www.mdpi.com/2076-3417/11/23/11164
 13. https://www.sciencedirect.com/topics/computer-science/fixed-point-number#:~:text=1%20Fixed%2DPoint%20Number%20Systems,bits%20and%20four%20fraction%20bits
