@@ -180,11 +180,11 @@ In summary, IEEE 754, bfloat16, minifloat, posit, and fixed-point numbers are fo
 13. Fixed-point number. Fixed-Point Number - an overview | ScienceDirect Topics. (n.d.). https://www.sciencedirect.com/topics/computer-science/fixed-point-number#:~:text=1%20Fixed%2DPoint%20Number%20Systems,bits%20and%20four%20fraction%20bits 
 14. So, H. (n.d.). Introduction to fixed point number representation. https://inst.eecs.berkeley.edu/~cs61c/sp06/handout/fixedpt.html#:~:text=In%20other%20word%2C%20fixed%20point,to%20a%20quantum%20of%200.5. 
 15. Interval FAQ Alejandro Casares -- what machines support IEEE 754?. Interval FAQ from Alejandro Casares -- What machines support IEEE 754? (n.d.). http://www.mscs.mu.edu/~georgec/IFAQ/casares1.html#:~:text=IEEE%20754%3A%20Intel%20x86%2C%20and,other%20Cray%20models%20have%20been 
-16. https://community.amd.com/t5/opencl/amd-gpus-ieee-754-compliance/td-p/98382?attachment-id=6602
-17. https://www.geeksforgeeks.org/fixed-point-representation/#:~:text=In%20digital%20signal%20processing%20(DSP,using%20the%20binary%20point%20concept.
-18. http://rsync.irixnet.org/tutorials/pstutorials/chapter1/5-fixedpoint.html#:~:text=Fixed%20point%20math%20is%20used,IBM%20compatible%20PCs).
-19. https://medium.com/@thishankahadugoda/how-computer-deal-with-floating-point-numbers-decimal-to-ieee-754-floating-point-representation-20d845436c9f
-20. https://github.com/cjdelisle/libposit
+16. AMD GPUs IEEE-754 Compliance. AMD.com. (2018, September 11). https://community.amd.com/t5/opencl/amd-gpus-ieee-754-compliance/td-p/98382?attachment-id=6602 
+17. GeeksforGeeks. (2022, August 17). Fixed Point Representation. GeeksforGeeks. https://www.geeksforgeeks.org/fixed-point representation/#:~:text=In%20digital%20signal%20processing%20(DSP,using%20the%20binary%20point%20concept. 
+18. Chapter 1.5: Fixed point math. Chapter 1.5: Fixed point Math. (n.d.). http://rsync.irixnet.org/tutorials/pstutorials/chapter1/5-fixedpoint.html#:~:text=Fixed%20point%20math%20is%20used,IBM%20compatible%20PCs). 
+19. Thishankahadugoda. (2021, October 5). How computer deal with Floating Point Numbers: Decimal to IEEE 754 Floating Point Representation. Medium. https://medium.com/@thishankahadugoda/how-computer-deal-with-floating-point-numbers-decimal-to-ieee-754-floating-point-representation-20d845436c9f 
+20. Cjdelisle. (n.d.). CJDELISLE/Libposit: A library for working with the posit number type. GitHub. https://github.com/cjdelisle/libposit 
 21. https://www.allaboutcircuits.com/technical-articles/fixed-point-representation-the-q-format-and-addition-examples/
 22. https://ieeexplore.ieee.org/document/8892116
 23. https://hal.science/hal-03195756v3/file/2021_Posit_IEEE754_Hardware_Cost.pdf
