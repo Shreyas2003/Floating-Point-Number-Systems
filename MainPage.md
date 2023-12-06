@@ -11,8 +11,7 @@ Title: Types of Floating Point Number Systems
 - [IEEE 754 System](#IEEE-754-System)
 - [Non-IEEE Floating Point Number Systems](#Non-IEEE-Floating-Point-Number-Systems)
 - [Applications for Different Types of Floating Point Number Systems](#Applications-for-Different-Types-of-Floating-Point-Number-Systems)
-- [Software Implementation of Floating Point Number Systems](#Software-Implementation-of-Floating-Point-Number-Systems)
-- [Hardware Implications of Floating Point Number Systems](#Hardware-Implications-of-Floating-Point-Number-Systems)
+- [Software and Hardware Implementation of Floating Point Number Systems](#Software-and-Hardware-Implementation-of-Floating-Point-Number-Systems)
 - [Conclusion](#Conclusion)
 - [Sources](#Sources)
 
