@@ -156,7 +156,7 @@ This is a sample architecture for a circuit that multiplies two posit numbers to
 
 ### Fixed-Point Numbers
 
-Fixed-point numbers arguably have the simplest implementation of the number types discussed in this article. Because they do not have any special fields such as exponents and mantissas; instead, they only have the number being stored in binary format and sometimes a sign bit. Therefore, from a software point of view, fixed-point numbers are the simplest to deal with. 
+Fixed-point numbers arguably have the simplest implementation of the number types discussed in this article. Because they do not have any special fields such as exponents and mantissas; instead, they only have the raw number in binary format and sometimes a sign bit. Therefore, from a software point of view, fixed-point numbers are the simplest to deal with. 
 
 Similarly, from a hardware perspective, fixed-point numbers are the simplest to understand. Because fixed-point numbers are stored in the same way as integers, addition and subtraction of these numbers is very simple. Fixed-point numbers are added in the same way integers are, with a shift if necessary to "line up" the decimal points of both numbers. For example, if a computer wanted to add 1001.01 + 100.1 (for this example, no sign bit is used), the computer would first convert 100.1 to 100.10, then add the corresponding place values from right to left. Therefore, the computer would then store 1101.11 [21].
 
