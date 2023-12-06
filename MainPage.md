@@ -13,7 +13,7 @@ Title: Types of Floating Point Number Systems
 - [Applications for Different Types of Floating Point Number Systems](#Applications-for-Different-Types-of-Floating-Point-Number-Systems)
 - [Software Implementation of Floating Point Number Systems](#Software-Implementation-of-Floating-Point-Number-Systems)
 - [Hardware Implications of Floating Point Number Systems](#Hardware-Implications-of-Floating-Point-Number-Systems)
-- [Concluion](#Conclusion)
+- [Conclusion](#Conclusion)
 - [Sources](#Sources)
 
 ## Introduction
