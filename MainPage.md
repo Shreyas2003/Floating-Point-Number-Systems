@@ -173,13 +173,13 @@ In summary, IEEE 754, bfloat16, minifloat, posit, and fixed-point numbers are fo
 6. IEEE-754 Reference Material. IEEE-754 reference material. (2021, May 5). https://babbage.cs.qc.cuny.edu/IEEE-754.old/References.xhtml 
 7. Genkina, D. (2023, March 29). Posits, a new kind of number, improves the math of ai. IEEE Spectrum. https://spectrum.ieee.org/floating-point-numbers-posits-processor 
 8. John. (2022, April 11). Posits: Tapered precision real numbers. John D. Cook | Applied Mathematics Consulting. https://www.johndcook.com/blog/2018/04/11/anatomy-of-a-posit-number/#:~:text=A%20posit%20number%20type%20is,devoted%20to%20the%20exponent%2C%20es 
-9. Behnam, Payman. (2020, April 21). Posit: A potential replacement for IEEE 754. SIGARCH. https://www.sigarch.org/posit-a-potential-replacement-for-ieee-754/ 
+9. Behnam, P. (2020, April 21). Posit: A potential replacement for IEEE 754. SIGARCH. https://www.sigarch.org/posit-a-potential-replacement-for-ieee-754/ 
 10. Google. (n.d.). The BFLOAT16 Numerical Format&nbsp; |&nbsp; cloud TPU&nbsp; |&nbsp; google cloud. Google. https://cloud.google.com/tpu/docs/bfloat16 
-11. https://mrob.com/pub/math/floatformats.html
-12. https://www.mdpi.com/2076-3417/11/23/11164
-13. https://www.sciencedirect.com/topics/computer-science/fixed-point-number#:~:text=1%20Fixed%2DPoint%20Number%20Systems,bits%20and%20four%20fraction%20bits
-14. https://inst.eecs.berkeley.edu/~cs61c/sp06/handout/fixedpt.html#:~:text=In%20other%20word%2C%20fixed%20point,to%20a%20quantum%20of%200.5.
-15. http://www.mscs.mu.edu/~georgec/IFAQ/casares1.html#:~:text=IEEE%20754%3A%20Intel%20x86%2C%20and,other%20Cray%20models%20have%20been
+11. Munafo, R. (n.d.). Survey of floating-point formats&nbsp; &nbsp; . Survey of Floating-Point Formats at MROB. https://mrob.com/pub/math/floatformats.html 
+12. Mocerino, L., &amp; Calimera, A. (2021, November 24). AXP: A HW-SW co-design pipeline for energy-efficient approximated convnets via associative matching. MDPI. https://www.mdpi.com/2076-3417/11/23/11164 
+13. Fixed-point number. Fixed-Point Number - an overview | ScienceDirect Topics. (n.d.). https://www.sciencedirect.com/topics/computer-science/fixed-point-number#:~:text=1%20Fixed%2DPoint%20Number%20Systems,bits%20and%20four%20fraction%20bits 
+14. So, H. (n.d.). Introduction to fixed point number representation. https://inst.eecs.berkeley.edu/~cs61c/sp06/handout/fixedpt.html#:~:text=In%20other%20word%2C%20fixed%20point,to%20a%20quantum%20of%200.5. 
+15. Interval FAQ Alejandro Casares -- what machines support IEEE 754?. Interval FAQ from Alejandro Casares -- What machines support IEEE 754? (n.d.). http://www.mscs.mu.edu/~georgec/IFAQ/casares1.html#:~:text=IEEE%20754%3A%20Intel%20x86%2C%20and,other%20Cray%20models%20have%20been 
 16. https://community.amd.com/t5/opencl/amd-gpus-ieee-754-compliance/td-p/98382?attachment-id=6602
 17. https://www.geeksforgeeks.org/fixed-point-representation/#:~:text=In%20digital%20signal%20processing%20(DSP,using%20the%20binary%20point%20concept.
 18. http://rsync.irixnet.org/tutorials/pstutorials/chapter1/5-fixedpoint.html#:~:text=Fixed%20point%20math%20is%20used,IBM%20compatible%20PCs).
