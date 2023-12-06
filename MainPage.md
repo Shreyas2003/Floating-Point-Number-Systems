@@ -162,6 +162,8 @@ Similarly, from a hardware perspective, fixed-point numbers are the simplest to 
 
 ## Conclusion
 
+In summary, IEEE 754, bfloat16, minifloat, posit, and fixed-point numbers are formats used to store numbers in binary format. While IEEE 754 is by far the most commonly used format in modern computers, all of these number types have their upsides and downsides. IEEE 754 is widely used but is prone to floating-point error. Bfloat16 and minifloat use the same format under the hood as IEEE 754 but can store less information thanks to the smaller number of bits allocated to these number types. Posit numbers can store larger and smaller numbers than IEEE 754 due to the regime space, but are the most complicated to implement in hardware. Fixed-point numbers are the fastest and simplest but cannot store nearly as wide of a range of numbers as the other formats can.
+
 ## Sources
 1. https://www.freecodecamp.org/news/floating-point-definition/
 2. https://www.geeksforgeeks.org/ieee-standard-754-floating-point-numbers/
